@@ -50,3 +50,12 @@ func viewDidLoad() {
   }
 }
 ```
+
+## Not thread safe collections
+
+When using closures with not thread safe collections like dictionary we need to make sure that they are thread safe.
+When using the async / await, we are returning values to TaskGroup and loop them inside for loop, it is already thread safe.
+See the implementation inside [CryptoCurrenciesManager](https://github.com/karolpiateknet/AsynAwaitPlayground/blob/main/ThreadsPlayground/Threads/CryptoCurrenciesManager.swift)
+
+## Wrapping NSURLSession in async / await before iOS 15
+https://github.com/karolpiateknet/iOS-Best-Practices/pull/1
